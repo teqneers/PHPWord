@@ -35,7 +35,7 @@ $myTextElement->setBold();
 $myTextElement->setName('Verdana');
 $myTextElement->setSize(22);
 
-// At least write the document to webspace:
+// At least write the document to web space:
 $objWriter = PHPWord_IOFactory::createWriter($PHPWord, 'Word2007');
 $objWriter->save('helloWorld.docx');
 
