@@ -29,7 +29,7 @@ $section->addText('Hello world! I am formatted.', array('name'=>'Tahoma', 'size'
 $PHPWord->addFontStyle('myOwnStyle', array('name'=>'Verdana', 'size'=>14, 'color'=>'1B2232'));
 $section->addText('Hello world! I am formatted by a user defined style', 'myOwnStyle');
 
-// You can also putthe appended element to local object an call functions like this:
+// You can also put the appended element to local object an call functions like this:
 $myTextElement = $section->addText('Hello World!');
 $myTextElement->setBold();
 $myTextElement->setName('Verdana');
