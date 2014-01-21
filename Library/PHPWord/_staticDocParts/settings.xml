@@ -18,7 +18,6 @@
 		<w:autofitToFirstFixedWidthCell />
 		<w:underlineTabInNumList />
 		<w:displayHangulFixedWidth />
-		<w:splitPgBreakAndParaMark />
 		<w:doNotVertAlignCellWithSp />
 		<w:doNotBreakConstrainedForcedTable />
 		<w:doNotVertAlignInTxbx />
