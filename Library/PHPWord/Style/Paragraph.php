@@ -34,36 +34,36 @@
  * @copyright  Copyright (c) 2011 PHPWord
  */
 class PHPWord_Style_Paragraph {
-	
+
 	/**
 	 * Paragraph alignment
-	 * 
+	 *
 	 * @var string
 	 */
 	private $_align;
-	
+
 	/**
 	 * Space before Paragraph
-	 * 
+	 *
 	 * @var int
 	 */
 	private $_spaceBefore;
-	
+
 	/**
 	 * Space after Paragraph
-	 * 
+	 *
 	 * @var int
 	 */
 	private $_spaceAfter;
-	
+
 	/**
 	 * Spacing between breaks
-	 * 
+	 *
 	 * @var int
 	 */
 	private $_spacing;
-	
-	
+
+
 	/**
 	 * New Paragraph Style
 	 */
@@ -72,11 +72,12 @@ class PHPWord_Style_Paragraph {
 		$this->_spaceBefore     = null;
 		$this->_spaceAfter      = null;
 		$this->_spacing         = null;
+		$this->_indentation     = null;
 	}
-	
+
 	/**
 	 * Set Style value
-	 * 
+	 *
 	 * @param string $key
 	 * @param mixed $value
 	 */
@@ -89,7 +90,7 @@ class PHPWord_Style_Paragraph {
 
 	/**
 	 * Get Paragraph Alignment
-	 * 
+	 *
 	 * @return string
 	 */
 	public function getAlign() {
@@ -98,7 +99,7 @@ class PHPWord_Style_Paragraph {
 
 	/**
 	 * Set Paragraph Alignment
-	 * 
+	 *
 	 * @param string $pValue
 	 * @return PHPWord_Style_Paragraph
 	 */
@@ -113,7 +114,7 @@ class PHPWord_Style_Paragraph {
 
 	/**
 	 * Get Space before Paragraph
-	 * 
+	 *
 	 * @return string
 	 */
 	public function getSpaceBefore() {
@@ -122,7 +123,7 @@ class PHPWord_Style_Paragraph {
 
 	/**
 	 * Set Space before Paragraph
-	 * 
+	 *
 	 * @param int $pValue
 	 * @return PHPWord_Style_Paragraph
 	 */
@@ -133,7 +134,7 @@ class PHPWord_Style_Paragraph {
 
 	/**
 	 * Get Space after Paragraph
-	 * 
+	 *
 	 * @return string
 	 */
 	public function getSpaceAfter() {
@@ -142,7 +143,7 @@ class PHPWord_Style_Paragraph {
 
 	/**
 	 * Set Space after Paragraph
-	 * 
+	 *
 	 * @param int $pValue
 	 * @return PHPWord_Style_Paragraph
 	 */
@@ -153,7 +154,7 @@ class PHPWord_Style_Paragraph {
 
 	/**
 	 * Get Spacing between breaks
-	 * 
+	 *
 	 * @return int
 	 */
 	public function getSpacing() {
@@ -162,7 +163,7 @@ class PHPWord_Style_Paragraph {
 
 	/**
 	 * Set Spacing between breaks
-	 * 
+	 *
 	 * @param int $pValue
 	 * @return PHPWord_Style_Paragraph
 	 */
@@ -170,5 +171,23 @@ class PHPWord_Style_Paragraph {
 	   $this->_spacing = $pValue;
 	   return $this;
 	}
+
+	/**
+	 * Set Indentation
+	 *
+	 * @param int $indentation
+	 */
+	public function setIndentation($indentation) {
+		$this->_indentation = $indentation;
+	}
+
+	/**
+	 * Get Indentation
+	 *
+	 * @return	integer
+	 */
+    public function getIndentation() {
+		return $this->_indentation;
+    }
 }
 ?>
