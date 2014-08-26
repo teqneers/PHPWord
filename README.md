@@ -11,6 +11,18 @@ All you have to do is to [get composer](http://getcomposer.org/download/) and ad
         }
         
 ## Examples
+
+### CantSplit in Tables
+Prevents the splitting of a table row if the content does not fit on the page. The whole row moves to a new page. 
+See http://msdn.microsoft.com/en-us/library/documentformat.openxml.wordprocessing.cantsplit(v=office.14).aspx
+
+```php
+...
+$wordTable = $section->addTable('tableStyle');
+$wordTable->setCantSplit(true);
+...
+```
+
 ### Usage of tab stops
 
 ```php
