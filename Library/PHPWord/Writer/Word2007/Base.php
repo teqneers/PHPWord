@@ -433,11 +433,17 @@ class PHPWord_Writer_Word2007_Base extends PHPWord_Writer_Word2007_WriterPart {
 
 					$objWriter->startElement('w:tr');
 
-						if(!is_null($height)) {
+						if(!is_null($height) || $table->getCantSplit()) {
 							$objWriter->startElement('w:trPr');
+							if(!is_null($height)) {
 								$objWriter->startElement('w:trHeight');
 									$objWriter->writeAttribute('w:val', $height);
 								$objWriter->endElement();
+							}
+							if ($table->getCantSplit()) {
+								$objWriter->startElement('w:cantSplit');
+								$objWriter->endElement();
+							}
 							$objWriter->endElement();
 						}
 
